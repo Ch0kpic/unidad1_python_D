@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    .azul { color: blue; }
+    .verde { color: green; }
+    .rojo { color: red; }
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Panel  </title>
+        <h1>Panel de dispositivos</h1>
+        <p> Consumo maximo permitido : {{ consumo_maximo }} w</p>
+
+    {% for d in dispositivos %}
+    <p>
+        <span style="color: blue;">Nombre:</span> {{ d.nombre }} |
+        
+        {% if d.consumo > 100 %}
+            <span style="color: red;">Consumo: {{ d.consumo }} w</span>
+        {% else %}
+            <span style="color: green;">Consumo: {{ d.consumo }} w</span>
+        {% endif %}
+        
+        | <span style="color: purple;">Estado:</span> Encendido
+    </p>
+    {% endfor %}
+
+    <p>dispositivos en estado critico : {{ contador_rojos }} </p>
+
+<body>
+    
+</body>
+</html>
