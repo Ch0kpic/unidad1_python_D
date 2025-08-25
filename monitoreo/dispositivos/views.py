@@ -4,7 +4,7 @@ from django.shortcuts import render
 
 def panel_dispositivos(request):
     dispositivos = [
-        {"nombre": "Sensor Temperatura", "consumo": 110},
+        {"nombre": "Sensor Temperatura", "consumo": 100},
         {"nombre": "Medidor Solar", "consumo": 120},
         {"nombre": "Sensor Movimiento", "consumo": 30},
         {"nombre": "Calefactor", "consumo": 200},
